@@ -19,8 +19,10 @@ RUN install -t /usr/local/bin phantomjs-2.1.1-linux-x86_64/bin/phantomjs
 RUN rm -rf phantomjs-2.1.1-linux-x86_64
 RUN rm phantomjs-2.1.1-linux-x86_64.tar.bz2
 
-RUN curl https://install.meteor.com/ | sh
+RUN curl https://install.meteor.com/?release=1.3.5.1 | sh
 
 RUN npm i -g spacejam
+RUN npm i -g mup
+RUN npm install -g ssh2
 
 CMD ["/bin/bash"]
